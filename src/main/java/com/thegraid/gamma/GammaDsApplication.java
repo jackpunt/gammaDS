@@ -18,7 +18,7 @@ public class GammaDsApplication {
 		SpringApplication.run(GammaDsApplication.class, args);
 	}
 
-	@Bean
+	//@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 
@@ -31,7 +31,7 @@ public class GammaDsApplication {
 			}
 		};
 	}
-	@Bean
+	//@Bean
 	public CommandLineRunner demo(CustomerRepository repository) {
 		return args -> {
 
