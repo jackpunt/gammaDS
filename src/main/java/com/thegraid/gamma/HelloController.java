@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot! ["+this.value+"]\n";
+		return String.format("Greetings from Spring Boot! [%s]\n", this.serverPort);
 	}
     @Value("${server.port}")
-    String value;
+    String serverPort;
 }
