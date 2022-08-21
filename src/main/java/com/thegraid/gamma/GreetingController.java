@@ -31,9 +31,9 @@ public class GreetingController {
         return messageSource.getMessage("welcome_h3", args, locale);
     }
 	@GetMapping("/json-greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+	public GreetingDTO greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         //String greet = messageSource.getMessage("welcome_h3", args, locale);
         String greet = this.msg("welcome_h3", name);
-		return new Greeting(counter.incrementAndGet(), greet);
+		return new GreetingDTO(counter.incrementAndGet(), greet);
 	}
 }

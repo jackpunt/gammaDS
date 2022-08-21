@@ -1,12 +1,12 @@
 package com.thegraid.gamma;
 
 // a "DTO" which will be sent as JSON via a @RestController
-public class Greeting {
+public class GreetingDTO {
 
 	private final long id;
 	private final String content;
 
-	public Greeting(long id, String content) {
+	public GreetingDTO(long id, String content) {
 		this.id = id;
 		this.content = content;
 	}
